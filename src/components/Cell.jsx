@@ -1,4 +1,5 @@
 import React from 'react';
+import { COLORS } from '../utils'
 
 /**
  * The Cell component represents the fundamental "clickable object" in
@@ -10,6 +11,10 @@ import React from 'react';
  * - handleClick, which will be a function to run when the cell has been clicked on 
  */
 const Cell = (props) => {
+  const color = props.color
+  const isActive = props.isActive
+  const handleClick = props.handleClick
+
   /* Create constants for color, isActive, and handleClick, reading the value off of props */
 
   /**
@@ -20,8 +25,14 @@ const Cell = (props) => {
    *    color string passed in with the props
    * - set the onClick property to be equal to the handleClick function
    *    passed in with the props
+   *
    */
-  return <div className="cell"></div>
+  
+  if (isActive) {
+    return <div className="cell active" style={{backgroundColor: color}} onClick={handleClick}></div>
+  } else {
+    return <div className="cell" style={{backgroundColor: color}} onClick={handleClick}></div>
+  }
 }
 
 export default Cell;

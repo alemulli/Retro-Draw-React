@@ -4,12 +4,20 @@
  */
 export const COLORS = [
   'red',
+  'OrangeRed',
   'orange',
   'yellow',
+  'YellowGreen',
   'green',
+  'LightSeaGreen',
   'blue',
+  'BlueViolet',
   'purple',
+  'HotPink',
+  'Wheat',
+  'SaddleBrown',
   'white',
+  'grey',
   'black'
 ];
 
